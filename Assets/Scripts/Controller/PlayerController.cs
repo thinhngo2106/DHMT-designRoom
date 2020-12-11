@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour {
 
 	Camera cam;			// Reference to our camera
 	PlayerMotor motor;	// Reference to our motor
-
+	
 	// Get references
 	void Start () {
 		cam = Camera.main;
@@ -66,11 +66,15 @@ public class PlayerController : MonoBehaviour {
 		if (newFocus != focus)
 		{
 			// Defocus the old one
-			if (focus != null)
+			if (focus != null){
 				focus.OnDefocused();
-
+				
+				
+			}
+			
 			focus = newFocus;	// Set our new focus
 			motor.FollowTarget(newFocus);	// Follow the new focus
+			focus.inventoryUI.SetActive(true);
 		}
 		
 		newFocus.OnFocused(transform);
@@ -79,10 +83,13 @@ public class PlayerController : MonoBehaviour {
 	// Remove our current focus
 	void RemoveFocus ()
 	{
-		if (focus != null)
+		if (focus != null){
+			focus.inventoryUI.SetActive(false);
 			focus.OnDefocused();
-
+			
+		}
 		focus = null;
+		
 		motor.StopFollowingTarget();
 	}
 }

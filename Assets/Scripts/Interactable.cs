@@ -15,7 +15,7 @@ public class Interactable : MonoBehaviour {
 	Transform player;		// Reference to the player transform
 
 	bool hasInteracted = false;	// Have we already interacted with the object?
-
+	public GameObject inventoryUI;
 	public virtual void Interact ()
 	{
 		// This method is meant to be overwritten

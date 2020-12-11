@@ -3,7 +3,17 @@ guid: 2c431cbd0a8428643b36a4e7e85559b9
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FabricUpholsteryBrightAnglePattern001_3K
+    second: {fileID: 2100000, guid: 92e626121acb27447bd52d2f8e5adf8b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FabricUpholsteryMossPlainWeave001_1K
+    second: {fileID: 2100000, guid: 5a596eac512e7c940876f14180e7a727, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -59,7 +69,7 @@ ModelImporter:
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 1
+    useFileScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
